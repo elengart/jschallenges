@@ -1,1 +1,1 @@
-# Coding challenges and experiments - mixed
+# JS Experiments
