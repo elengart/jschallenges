@@ -44,11 +44,16 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 	var Hello = __webpack_require__(159);
+
+	// test es6 syntax
+	var foo = { a: 'a', b: 'b' };
+	var foo1 = _extends({ c: 'c' }, foo);
+	console.log(foo1);
 
 	ReactDOM.render(React.createElement(Hello, null), document.getElementById("app"));
 
@@ -19754,15 +19759,13 @@
 /* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
-
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 
 	var hello = React.createClass({
 	    displayName: 'hello',
 
-	    render: function render() {
+	    render: function () {
 	        return React.createElement(
 	            'div',
 	            null,
