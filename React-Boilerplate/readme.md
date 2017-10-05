@@ -1,14 +1,15 @@
 # React Project Boilerplate
 
-# install
+## install
 $ npm install
 
-# build
+## build
 $ webpack
 
-# run option 1 - server
+## run option 1 - server
 $ node server.js
+
 localhost:3000
 
-# run option 2 - file
+## run option 2 - file
 file://.../public/index.html
