@@ -1,6 +1,6 @@
-# boilerplate js project with jasmine unit testing
+# Boilerplate js project with jasmine unit testing
 
-# setup
+# Setup
 To set up the project run `npm install`.
 
 # Testing
