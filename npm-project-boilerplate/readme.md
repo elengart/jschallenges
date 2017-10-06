@@ -1,6 +1,6 @@
-# boilerplate js project with jasmine unit testing
+# Boilerplate js project with jasmine unit testing
 
-# setup
+# Setup
 To set up the project run `npm install`.
 
 # Testing
@@ -12,4 +12,4 @@ The js entry point is `app/index.js`.
 
 # Build
 To build the js run `npm run build`
-This will build the code in `game/index.js` => `dist/index.js`.
+This will build the code in `app/index.js` => `dist/index.js`.
