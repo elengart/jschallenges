@@ -14,7 +14,6 @@ The js entry point is `app/index.js`.
 To build the js run `npm run build`
 This will build the code in `app/index.js` => `dist/index.js`.
 
-
 ### Write a Calculator class that matches this specification
 ```javascript
 describe( "Calculator", function(){
