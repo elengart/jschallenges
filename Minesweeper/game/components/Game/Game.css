@@ -1,0 +1,38 @@
+.game__header, .game__footer {
+    text-align: center;
+    font-size: 150%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+}
+.game__header--go {
+    color: teal;
+}
+
+.game__header--playing {
+    color: blue;
+}
+.game__header--won {
+    color: green;
+}
+.game__header--lost {
+    color: red;
+}
+.game__header--lost:after {
+    content: " :-("
+}
+
+.game__restart {
+    font-size: inherit;
+    padding: 10px 20px;
+}
+.game__restart--go {
+    display: none;
+}
+
+.game__main {
+    background: lightgrey;
+    padding: 15px;  
+    border: 5px outset #eee;
+    margin: 0 auto;
+}

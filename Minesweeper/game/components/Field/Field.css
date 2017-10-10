@@ -1,0 +1,14 @@
+.field {
+    width: 20px;
+    height:  20px;
+    background-color: lightgrey;
+    float: left;
+    border-radius:  1px;
+}
+
+.field:focus {
+    outline: none;
+}
+.field--cleared {
+    border: 1px solid #bcbcbc;
+}
