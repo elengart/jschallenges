@@ -6,8 +6,8 @@ let Field = require('Field');
 
 const BOARD_SETTING = {
     CELL_WIDTH: 20,
-    BORDER_WIDTH: 5,
-    BOARD_PADDING: 15
+    BORDER_WIDTH: 3,
+    BOARD_PADDING: 10
 }
 
 let Board = React.createClass({ 
@@ -24,10 +24,13 @@ let Board = React.createClass({
         let boardWidth = cellWidth * props.columnCount + borderWidth * 2;
         let boardOuterWidth = boardWidth + (boardPadding + borderWidth) * 2;
         let boardStyle = {
-            width: boardWidth
+            width: boardWidth,
+            borderWidth: borderWidth
         };  
         let boardOuterStyle = {
-            width: boardOuterWidth
+            width: boardOuterWidth,
+            padding: boardPadding,
+            borderWidth: borderWidth
         }
         let spots = this.props.spots;
         let cells = spots.map((spot, idx) => (<Field 

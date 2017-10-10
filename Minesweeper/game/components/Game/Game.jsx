@@ -13,9 +13,9 @@ const GAME_STATUS = {
 let play = {};
 
 let setNewGame = () => {
-    let columns = 5;
+    let columns = 10;
     let rows = 5;
-    let mines = 0;
+    let mines = Math.floor(0.1 * columns * rows + 1);
     play = new Play(columns, rows, mines); 
 
     return {
@@ -37,8 +37,8 @@ let Game = React.createClass({
      },
     
     handleClick(cellKey) {
-        play.clearSpot(cellKey);        
         let gameStatus = GAME_STATUS.PLAYING;
+        play.clearSpot(cellKey);        
         if (play.won()){
             gameStatus = GAME_STATUS.WON;
         } 

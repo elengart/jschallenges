@@ -1,19 +1,22 @@
-.game__header, .game__footer {
+.game__header, 
+.game__footer {
     text-align: center;
-    font-size: 150%;
     text-transform: uppercase;
     font-weight: bold;
     padding: 20px;
 }
-.game__header--go {
-    color: teal;
-}
 
+.game__header {
+    font-size: 150%;
+}
+.game__header--go {
+    color: lightgray;
+}
 .game__header--playing {
-    color: blue;
+    color: lightblue;
 }
 .game__header--won {
-    color: green;
+    color: lightgreen;
 }
 .game__header--lost {
     color: red;
@@ -24,12 +27,15 @@
 
 .game__restart {
     font-size: inherit;
-    padding: 10px 20px;
+    padding: 8px 20px;
+    color: #666;
+    border-radius: 2px;
+    font-size: 120%;
+    line-height: 120%;
 }
 .game__restart--go {
     display: none;
 }
-
 .game__main {
     background: lightgrey;
     padding: 15px;  
