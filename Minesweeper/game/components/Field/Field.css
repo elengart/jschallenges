@@ -11,13 +11,14 @@
 .field:focus {
     outline: none;
 }
+
 .field--cleared {
-    border: 1px solid #bcbcbc;
+    border: 1px solid rgba(0,0,0,0.1);
     cursor: default;
 }
 
 .field__content--ismine {
-    background: #f60 url("../../../assets/images/mine.png") no-repeat center / cover;
+    background: #f60 url("./assets/images/mine.png") no-repeat center / cover;
     position: absolute;
     display: inline-block;
     top: 0;
@@ -25,3 +26,37 @@
     width: 18px;
     height: 18px;
 }
+
+.field__content {
+    font-weight: bold;
+    font-size:  14px;
+    line-height: 14px;
+}
+.field__content--1mines {
+    color: blue;
+}
+
+.field__content--2mines {
+    color: green;
+}
+.field__content--3mines {
+    color: red;
+}
+.field__content--4mines {
+    color: #333;
+}
+.field__content--5mines {
+    color: brown;
+}
+
+.field__content--6mines {
+    color: purple;
+}
+
+.field__content--7mines {
+    color: black;
+}
+
+
+
+
