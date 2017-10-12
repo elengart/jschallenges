@@ -6,30 +6,44 @@ let Field = React.createClass({
         let props = this.props;
         props.handleClick(props.cellKey);
     },
-    render() {
+    
+    renderContent() {
         let props = this.props;
+        if (!props.cleared) {
+            return;
+        }
+        
         let content;
-            
+        let dataset = {};
+        let className = 'field__content';
+        
+        
         if (props.mine){
-            content = "x";
+            className = `${className} ${className}--ismine`;
         } else {
             if(props.mineCount > 0) {
-                content = props.mineCount;
+               content = props.mineCount;
+               className =  `${className} ${className}--${props.mineCount}mines`;
             } 
         }
-      
+        return (<span className={className}>{content}</span>);
+    },
+    
+    render() {
+        let props = this.props;
         let className = 'field' + (props.cleared ? ' field--cleared':'');
 
         let style = {
-            width: props.cellWidth,
+            width: props.cellWidth,  
             height: props.cellHeight
         }
+        let content = this.renderContent();
         return (        
             <button className={className}
                 style={style}
                 onClick = {this.handleClick}
             >
-                {props.cleared && content}
+                {content}
             </button>
         );
     }

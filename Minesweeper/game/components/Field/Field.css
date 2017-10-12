@@ -4,6 +4,8 @@
     background-color: lightgrey;
     float: left;
     border-radius:  1px;
+    position: relative;
+    cursor: pointer;
 }
 
 .field:focus {
@@ -11,4 +13,15 @@
 }
 .field--cleared {
     border: 1px solid #bcbcbc;
+    cursor: default;
+}
+
+.field__content--ismine {
+    background: #f60 url("../../../assets/images/mine.png") no-repeat center / cover;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
 }

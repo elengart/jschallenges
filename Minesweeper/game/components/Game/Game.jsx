@@ -15,6 +15,7 @@ let play = {};
 let setNewGame = () => {
     let columns = 10;
     let rows = 5;
+
     let mines = Math.floor(0.1 * columns * rows + 1);
     play = new Play(columns, rows, mines); 
 

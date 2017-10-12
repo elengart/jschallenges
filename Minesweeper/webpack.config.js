@@ -16,6 +16,7 @@ module.exports = {
     module: {
         loaders: [
             {
+             
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 loader: 'babel',
@@ -36,8 +37,20 @@ module.exports = {
                 loaders: ["style-loader", "css-loader"],
                 test: /\.css$/,
                 exclude: /(node_modules)/
-            }
-            
+            },
+            {
+              loader: 'file-loader',
+              test: /\.(png|jpg|gif)$/,
+              options: {
+                name (file) {
+                  if (env === 'development') {
+                    return '[path][name].[ext]'
+                  }
+
+                  return '[hash].[ext]'
+                }
+              }  
+            }           
         ]
     }
 };
