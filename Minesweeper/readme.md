@@ -1,4 +1,6 @@
-# setup
+[# Demo] (http://egartshtein.com/demos/Minesweeper/)
+
+# Setup
 To set up the project run `npm install`.
 
 # Testing
