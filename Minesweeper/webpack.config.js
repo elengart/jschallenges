@@ -10,7 +10,8 @@ module.exports = {
         alias: {
             Game: "game/components/Game/Game.jsx",
             Board: "game/components/Board/Board.jsx",
-            Field: "game/components/Field/Field.jsx"
+            Field: "game/components/Field/Field.jsx",
+            Setup: "game/components/Setup/Setup.jsx"
         }
     },
     module: {

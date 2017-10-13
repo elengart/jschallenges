@@ -1,0 +1,12 @@
+.setup {
+    padding: 20px;
+}
+
+.setup label {
+    color: #eee;
+    margin-right: 20px;
+}
+
+.setup select {
+    font-size: 120%;
+}

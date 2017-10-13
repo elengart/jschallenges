@@ -3,57 +3,61 @@
     height:  20px;
     background-color: lightgrey;
     float: left;
-    border-radius:  1px;
     position: relative;
-    cursor: pointer;
-}
-
-.field:focus {
-    outline: none;
 }
 
 .field--cleared {
     border: 1px solid rgba(0,0,0,0.1);
-    cursor: default;
 }
 
-.field__content--ismine {
-    background: #f60 url("./assets/images/mine.png") no-repeat center / cover;
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
+.field__button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius:  1px;
+    float: left;
 }
 
-.field__content {
+.field__button:focus {
+    outline: none;
+}
+
+.field--cleared {
     font-weight: bold;
-    font-size:  14px;
-    line-height: 14px;
+    font-size:  16px;
+    text-align: center;
+    text-shadow:
+     1px 1px 0 #fff;
 }
-.field__content--1mines {
+
+.field--ismine {
+    background: #f60 url("./assets/images/mine.png") no-repeat center / cover;
+    border: none;
+}
+
+.field--1mines {
     color: blue;
 }
 
-.field__content--2mines {
+.field--2mines {
     color: green;
 }
-.field__content--3mines {
+.field--3mines {
     color: red;
 }
-.field__content--4mines {
+.field--4mines {
     color: #333;
 }
-.field__content--5mines {
+.field--5mines {
     color: brown;
 }
 
-.field__content--6mines {
+.field--6mines {
     color: purple;
 }
 
-.field__content--7mines {
+.field--7mines {
     color: black;
 }
 

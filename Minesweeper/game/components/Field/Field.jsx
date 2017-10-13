@@ -7,44 +7,50 @@ let Field = React.createClass({
         props.handleClick(props.cellKey);
     },
     
-    renderContent() {
+    getClearedStatusClassName(className) {
         let props = this.props;
-        if (!props.cleared) {
-            return;
-        }
-        
         let content;
         let dataset = {};
-        let className = 'field__content';
+        let cleared = `${className} ${className}--cleared`;
         
         
         if (props.mine){
-            className = `${className} ${className}--ismine`;
-        } else {
-            if(props.mineCount > 0) {
-               content = props.mineCount;
-               className =  `${className} ${className}--${props.mineCount}mines`;
-            } 
-        }
-        return (<span className={className}>{content}</span>);
+            return className = `${cleared} ${className}--ismine`;
+        } 
+        
+        if(props.mineCount > 0) {
+           content = props.mineCount;
+           return `${cleared} ${className}--${props.mineCount}mines`;
+        } 
+        return cleared;
     },
     
     render() {
         let props = this.props;
-        let className = 'field' + (props.cleared ? ' field--cleared':'');
+        let className = 'field';
+        let content;
+        
+        if (props.cleared) {
+            className = this.getClearedStatusClassName(className);
+            content = ( props.mineCount > 0 ) && props.mineCount;
+        } else {
+            content = (<button
+                className = "field__button"                                
+                onClick = {this.handleClick}
+            />);
+        }
 
         let style = {
             width: props.cellWidth,  
             height: props.cellHeight
         }
-        let content = this.renderContent();
-        return (        
-            <button className={className}
-                style={style}
-                onClick = {this.handleClick}
-            >
+        
+        
+        return (  
+            <div className={className}
+                style={style}>
                 {content}
-            </button>
+            </div> 
         );
     }
 });

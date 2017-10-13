@@ -6,34 +6,34 @@
     padding: 20px;
 }
 
-.game__header {
+.game__status {
     font-size: 150%;
 }
-.game__header--go {
+.game--go .game__status{
     color: lightgray;
 }
-.game__header--playing {
+.game--playing .game__status  {
     color: lightblue;
 }
-.game__header--won {
+.game--won .game__status {
     color: lightgreen;
 }
-.game__header--lost {
+.game--lost .game__status {
     color: red;
 }
-.game__header--lost:after {
-    content: " :-("
+.game--lost .game__status:after {
+    content: " :-(";
 }
 
 .game__restart {
     font-size: inherit;
     padding: 8px 20px;
-    color: #666;
+    color: #333;
     border-radius: 2px;
-    font-size: 120%;
-    line-height: 120%;
+    cursor: pointer;
 }
-.game__restart--go {
+
+.game--go .game__restart {
     display: none;
 }
 .game__main {
