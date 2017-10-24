@@ -14,3 +14,7 @@ $ npm run build
 
 index.html
 
+## demo
+
+http://egartshtein.com/demos/Codeplayer/
+
