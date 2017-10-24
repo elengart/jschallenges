@@ -1,0 +1,18 @@
+{
+  "name": "codeplayer",
+  "version": "1.0.0",
+  "description": "jsbin immitation using html, css and jquery. Changing iframe contents.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js > bundle.js"
+  },
+  "author": "elena",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+    "devDependencies": {
+    "browserify": "^14.5.0"
+  }
+}
