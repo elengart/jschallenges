@@ -38,17 +38,18 @@ function setJS(val) {
 }
 
 $(function(){
+    // toggle panel visibilty
     $("#nav li a").click(function(e) {
         e.preventDefault();
         var target_panel = this.href.split('#')[1];
         $("#player").toggleClass(target_panel);
         var visiblePanels = $('.panel:visible').length;
         if (visiblePanels) {
-            $('.panel').width(100/visiblePanels  + "%");
+            $('.panel').width(99/visiblePanels  + "%");
         }
     });
 
-    
+    // process changes
     $(".panel textarea").on('keyup change', function(){
           var val = $(this).val();
           var target_id = $(this).parent().attr("id");
