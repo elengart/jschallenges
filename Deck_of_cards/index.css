@@ -1,0 +1,103 @@
+            body * {
+                box-sizing: border-box;
+                font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+            
+            h1, h2 {
+                font-family: Arial, Helvetica, sans-serif;
+                color: #333;
+            }
+            
+            .description {
+                text-align: center
+            }
+
+            #room {
+                position: relative;
+                margin-top: 1em;
+            }
+            
+            header {
+               text-align: center;
+
+            }
+
+            #desktop {
+                position: relative;
+                width: 90%;
+                margin: 0 auto;
+                min-height: 100px;
+                background-color: lightgreen;
+                padding: 10px;
+                border: 20px solid green;          
+            }
+                      
+            .card {
+                position: relative;
+                display: inline-block;
+                margin: 1%;
+                background: white;
+                width: 100px;
+                height: 160px;
+                border-radius: 5px;
+                box-shadow: 3px 3px 6px #666;
+                transition: all 0.5s ease-in;
+            }
+            
+            .card:hover {
+                transform: scale(1.2) rotateZ(5deg);
+                box-shadow: 6px 6px 12px #333;
+                
+            }
+            
+            .corner {
+                position: absolute;
+            }
+            
+            .top-corner {
+                left: 10px;
+                top:  10px;
+            }
+            
+            .bottom-corner {
+                right: 10px;
+                bottom:  10px;
+                transform: rotateZ(180deg);
+            }
+            
+            .rank,
+            .suite {
+                position: relative;
+                display: block;
+                font-size:  1.5em;
+            }
+            
+            .suite:after {
+                position: relative;
+                display: block;
+                font-style: normal;
+            }
+            
+            .hearts .suite:after {
+                content: '\2665';
+                color: red;
+            }
+            
+            .diamonds .suite:after {
+                content: '\2666';
+                color: red;
+            }
+            
+            .spades .suite:after {
+                content: '\2660';
+                color: black;
+            }
+            
+            .clubs .suite:after {
+                content: '\2663';
+                color: black;
+            }
+
+            #template {
+                display: none;
+            }

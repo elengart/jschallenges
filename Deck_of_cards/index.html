@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta title="Deck of Cards" />
+        <link type="text/css" rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Deck of cards experiment</h1>
+        </header>
+        <section class = "description">
+            <i>Display 52 card deck to practice js arrays, loops, and DOM manipulation</i>
+        </section>
+        <section id="room">
+            <div id="desktop">
+                <div id="template" class="card">
+                    <div class="top-corner corner">
+                        <span class="rank"></span>
+                        <i class="suite"></i>
+                    </div>
+                    <div class="bottom-corner corner">
+                         <span class="rank"></span>
+                         <i class="suite"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            "use strict";
+            
+            // card object
+            var Card = {
+                suite: '',
+                rank: '',
+            }
+            
+            // array of suites
+            var suites = ["hearts", "spades", "diamonds", "clubs"];
+            
+            // array of ranks
+            var ranks = [];
+            for (var i = 2; i <= 10; i++) {
+                ranks.push(i);
+            }
+            debugger;
+            ranks.splice(9, 0, "J", "Q", "K", "A");
+            
+          
+            // build the deck
+            var deck = [];
+            
+            for (var i = 0; i < suites.length; i++) {
+                for (var j = 0; j < ranks.length; j++) {
+                    
+                    var oneCard = Object.create(Card);
+                    
+                    oneCard.suite = suites[i];
+                    oneCard.rank = ranks[j];
+                    deck.push(oneCard);
+                }
+            }
+            
+
+            // display deck        
+            var templateCard = document.getElementById("template");
+            var desktop = document.getElementById("desktop");
+            
+            for (var i = 0; i < deck.length; i++) {
+
+                var newCardElement = templateCard.cloneNode(true);  // introducing cloneNode function
+                
+                newCardElement.removeAttribute('id');  //introducing removeAttribute function
+                
+                newCardElement.className = 'card ' + deck[i].suite;
+                var rankElements = newCardElement.getElementsByClassName('rank');
+                rankElements[0].innerHTML = deck[i].rank;
+                rankElements[1].innerHTML = deck[i].rank;
+                
+                desktop.appendChild(newCardElement);
+            }
+            
+           
+            
+            // Topics to discuss
+            // how can we optimize this code?
+            // how can we reshuffle the cards?
+            // how can I move cards around by drag and drop?
+   
+            
+        </script>
+    </body>
+</html>
