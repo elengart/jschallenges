@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+#ffs-container {
+    position: relative;
+    height:  11em;
+}
+
+@keyframes breathing {
+    0% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+    25% {
+        background-color: blue;
+        transform: scale(3);
+    }
+    50% {
+        background-color: lightgreen;
+        transform: scale(3);
+    }
+    86% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+    100% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes breathing {
+    0% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+    25% {
+        background-color: blue;
+        transform: scale(3);
+    }
+    50% {
+        background-color: lightgreen;
+        transform: scale(3);
+    }
+    86% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+    100% {
+        background-color: lightblue;
+        transform: scale(1);
+    }
+}
+
+@keyframes breathingInstr {
+    0% {
+        content: "inhale";
+    }
+    25% {
+        content: "hold";
+    }
+    50% {
+        content: "exhale";
+    }
+    86% {
+        content: "";
+    }
+    100% {
+        content: "inhale";
+    }
+}
+
+@-webkit-keyframes breathingInstr {
+    0% {
+        content: "inhale";
+    }
+    25% {
+        content: "hold";
+    }
+    50% {
+        content: "exhale";
+    }
+    86% {
+        content: "";
+    }
+    100% {
+        content: "inhale";
+    }
+}
+
+#shape {
+    position: relative;
+    margin: 6em auto;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: yellow;
+    animation: breathing 20s linear infinite;
+    background-image: url('lotus_transparent.png');
+    background-size: cover;
+}
+#shape::after {
+    display: block;
+    color: white;
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1em;
+    width: 5em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    animation: breathingInstr 20s step-end infinite;
+    -webkit-animation: breathingInstr 20s step-end infinite;
+}
+
+#shape:hover~.tip {
+    opacity: 1;
+}
+
+.tip {
+    position: relative;
+    background: rgba(240, 248, 255, 0.7);
+    border-radius: 4px;
+    padding:  10px;
+    margin: -100px auto;
+    width: 300px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.tip::before {
+    left: 50%;
+    margin-left: -10px;
+    top: -20px;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    border: 10px solid rgba(240, 248, 255, 0.7); 
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
