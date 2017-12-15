@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+
+</head>
+<body>
+    
+    <script>
+       function findFib(seq) {
+           if (seq < 2) {
+               return 1;
+           }
+           
+           return findFib(seq - 2) + findFib(seq - 1);
+       }
+
+        let start = new Date().getTime();
+        console.log(findFib(45));
+        let end = new Date().getTime();
+        console.log((end - start)/1000);
+        
+        
+        function findFib1(seq) {
+            let fib=[1,1];
+            for (let i=2; i <= seq; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            return fib[seq];       
+        }
+        
+        let start1 = new Date().getTime();
+        console.log(findFib1(45));
+        let end1 = new Date().getTime();
+        console.log((end1 - start1)/ 1000);
+        
+        
+        
+        
+    </script>
+    
+    
+
+</body>
+</html>
