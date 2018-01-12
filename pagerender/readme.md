@@ -3,11 +3,11 @@
 ### Requirements: ES5
 
 ### Demo
-[DEMO](http://www.egartshtein.com/demos/pageloaddemo)
+(http://www.egartshtein.com/demos/pageloaddemo)
 
 ### Solution
 
-(UltimatePageDetector.js)
+(https://github.com/elengart/jsplayground/blob/master/pagerender/UltimatePageLoadDetector.js)
 
 ### Browsers
 
