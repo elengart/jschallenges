@@ -1,0 +1,42 @@
+* {
+    font-family: Lato, sans-serif;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+#ajaxText {
+    margin: 0 auto;
+}
+
+
+#ajaxStatus{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-size: cover;
+}
+
+.success {
+    background-image: url('assets/puppy.gif');
+}
+.loading {
+    background-image: url('assets/run.gif');
+}
+
+.error {
+    background-image: url('assets/sad-puppy.jpg');
+}
+
+#pageStatus {
+    font-size: 80%;  
+    font-style: italic;
+}
+
+
